@@ -42,6 +42,16 @@
   height: 20px; /* Size of icons */
 }
 
+.container {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  width: 358px; /* Consistent width with other cards */
+  background-color: white; /* White background */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin: 20px auto; /* Center align and add margin from top */
+}
+
 /* ---------- Today's Workout Card Styling ---------- */
 .today-workout-card {
   margin-top: 20px; /* Space from the top bar */
