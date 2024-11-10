@@ -1,0 +1,332 @@
+/* Import Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* ---------- Top Bar Styling ---------- */
+.top-bar {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-weight: 400; /* Normal weight */
+  width: 390px; /* Match this with the container width */
+  height: 100px; /* Height of the top bar */
+  background-color: #fef6ff; /* Background color of the top bar */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between title and icon */
+  align-items: center; /* Center vertically */
+  padding: 0 20px; /* Padding on the sides */
+  border-bottom: 0.5px solid #4c1f54; /* Bottom border color */
+}
+
+/* ---------- Navigation Bar Styling ---------- */
+.nav-bar {
+  background-color: #fef6ff; /* Light background */
+  border-top: 0.5px solid #907695; /* Border on top */
+  position: fixed;
+  bottom: 0; /* Fixed at bottom */
+  width: 390px; /* Fixed width */
+  height: 60px; /* Height of the navigation bar */
+  display: flex; /* Flexbox layout */
+  justify-content: space-around; /* Space navigation buttons */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-bar a {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack icon and text */
+  align-items: center; /* Center items */
+  color: black; /* Text color */
+  font-size: 10px; /* Font size */
+  text-decoration: none; /* No underline */
+}
+
+.nav-icon {
+  width: 20px; /* Size of icons */
+  height: 20px; /* Size of icons */
+}
+
+/* ---------- Today's Workout Card Styling ---------- */
+.today-workout-card {
+  margin-top: 20px; /* Space from the top bar */
+  width: 358px; /* Width of the workout card */
+  height: 224px; /* Height of the workout card */
+  border-radius: 15px; /* Rounded corners */
+  position: relative; /* Positioning for child elements */
+  overflow: hidden; /* Hide overflow */
+}
+
+.workout-background {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  border-radius: 15px; /* Match the card's rounded corners */
+  object-fit: cover; /* Cover the entire area */
+}
+
+.text-container {
+  position: absolute; /* Position text on top of the image */
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  color: white; /* Text color */
+}
+
+.today-text {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-size: 24px; /* Font size for "Today is" */
+  margin: 0; /* Remove default margin */
+}
+
+.leg-day-text {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-size: 48px; /* Font size for "LEG DAY" */
+  font-weight: bold; /* Bold text */
+  margin: 0; /* Remove default margin */
+  margin-top: 5px; /* Space between lines */
+}
+
+.start-workout-button {
+  position: absolute; /* Position button */
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  width: 133px; /* Width of the button */
+  height: 30px; /* Height of the button */
+  border: 1.5px solid white; /* White stroke */
+  background-color: transparent; /* Transparent background */
+  color: white; /* Text color */
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.delete-button {
+  background: none; /* Transparent background */
+  border: none; /* No border */
+  color: red; /* Red color */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  margin-left: 10px; /* Space between buttons */
+}
+
+/* ---------- Recent Posts Section ---------- */
+.recent-posts {
+  margin-top: 49px; /* Space from the Today's Workout card */
+}
+
+.recent-posts-heading {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-size: 20px; /* Font size for heading */
+  color: #4c1f54; /* Color for heading */
+  margin: 0; /* Remove default margin */
+}
+
+.post-card {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  background-color: white; /* Background color for the card */
+  width: 358px; /* Width of the card */
+  height: 65px; /* Height of the card */
+  border-radius: 15px; /* Rounded corners */
+  border: 0.5px solid #4c1f54; /* Border color */
+  margin-top: 20px; /* Space from the heading */
+  padding: 10px; /* Padding for the card */
+}
+
+.profile-picture {
+  width: auto; /* Auto width */
+  height: 28px; /* Fixed height */
+  border-radius: 50%; /* Make it circular */
+  margin-right: 10px; /* Space between the picture and text */
+  max-width: 100%; /* Prevent overflow */
+}
+
+.create-post-text {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  color: #6b6b6b; /* Text color */
+  font-size: 14px; /* Font size for text */
+  flex-grow: 1; /* Allow text to take available space */
+}
+
+.add-icon {
+  width: auto; /* Auto width */
+  height: 32px; /* Fixed height */
+  max-width: 100%; /* Prevent overflow */
+}
+
+/* ---------- Post Card Styling ---------- */
+.post-card {
+  background-color: white;
+  border: 0.5px solid #4c1f54; /* Dark purple border */
+  border-radius: 15px;
+  padding: 15px; /* Adds padding inside the card */
+  margin: 15px 0; /* Space between cards */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Ensure full width of the card */
+  max-width: 358px; /* Limit width */
+  overflow: hidden; /* Prevent overflow of content */
+  height: auto; /* Allow height to be determined by content */
+  display: flex; /* Use flexbox for overall card layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.post-header {
+  width: 100%; /* Full width for header */
+  display: flex;
+  align-items: center;
+  justify-content: space-aroun; /* Space out header items */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.profile-picture {
+  width: 28px; /* Profile picture size */
+  height: 28px; /* Profile picture size */
+  border-radius: 50%; /* Round the profile picture */
+  margin-right: 10px; /* Space to the right of the picture */
+}
+
+.post-info {
+  flex-grow: 1; /* Allow info to take up available space */
+}
+
+.post-name {
+  font-size: 14px; /* Name font size */
+  font-weight: bold; /* Bold font for name */
+}
+
+.post-date {
+  font-size: 8px; /* Smaller font size for date */
+  color: #666; /* Gray color for the date */
+}
+
+.options-icon {
+  width: 20px; /* Size for options icon */
+  height: 20px; /* Size for options icon */
+}
+
+.post-caption {
+  margin: 10px 0; /* Margin above and below caption */
+  font-size: 14px; /* Caption font size */
+}
+
+.exercise-table {
+  width: 100%; /* Full width for the table */
+  border-collapse: collapse; /* Merge borders */
+  margin-top: 10px; /* Space above the table */
+}
+
+.exercise-table th,
+.exercise-table td {
+  padding: 8px; /* Padding for cells */
+  border-bottom: 1px solid #f0f0f0; /* Light border for rows */
+  text-align: left; /* Align text left */
+}
+
+.exercise-table th {
+  background-color: #f5f5f5; /* Header background color */
+  font-weight: bold; /* Bold header text */
+}
+
+.likes-comments {
+  display: flex; /* Align likes and comments next to each other */
+  justify-content: space-between; /* Space them out */
+  margin-top: 10px; /* Margin above footer */
+  font-size: 14px; /* Font size for likes/comments */
+}
+
+/* ---------- Create Workout Page Styling ---------- */
+.create-workout-container {
+  font-family: "Poppins", sans-serif;
+  width: 358px; /* Consistent width with other cards */
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Center align and add margin from top */
+}
+
+.create-workout-container h2 {
+  font-size: 24px;
+  color: #4c1f54;
+  margin-bottom: 20px;
+}
+
+/* Form Fields */
+.create-workout-container form div {
+  margin-bottom: 15px; /* Space between input fields */
+}
+
+.create-workout-container label {
+  display: block;
+  font-size: 14px;
+  color: #6b6b6b;
+  margin-bottom: 5px;
+}
+
+.create-workout-container input[type="text"],
+.create-workout-container input[type="datetime-local"],
+.create-workout-container input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #4c1f54;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Add Exercise Button */
+.create-workout-container button[type="button"] {
+  background-color: #4c1f54;
+  color: #fef6ff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.create-workout-container button[type="button"]:hover {
+  background-color: #3a1742; /* Darken on hover */
+}
+
+/* Submit Button */
+.create-workout-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4c1f54;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.create-workout-container button[type="submit"]:disabled {
+  background-color: #907695; /* Lighter shade when loading */
+}
+
+/* Exercise Section Styling */
+.exercise-input {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.exercise-input input {
+  margin-bottom: 8px; /* Space between exercise inputs */
+}
+
+.exercise-input button {
+  align-self: flex-end; /* Align button to the right */
+  background-color: #ff4b4b; /* Red for delete button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.exercise-input button:hover {
+  background-color: #d13939; /* Darken on hover */
+}
