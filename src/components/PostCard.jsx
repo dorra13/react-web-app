@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import optionsIcon from "../images/options-icon.png";
 
 const PostCard = ({
@@ -11,6 +12,8 @@ const PostCard = ({
   comments,
   onDelete,
 }) => {
+  const navigate = useNavigate();
+
   const handleDelete = (event) => {
     event.stopPropagation();
     if (window.confirm("Are you sure you want to delete this post?")) {
@@ -18,8 +21,13 @@ const PostCard = ({
     }
   };
 
+  const handleEdit = () => {
+    // Navigate to the Edit page with the post id
+    navigate(`/edit-post/${id}`);
+  };
+
   return (
-    <div className="post-card" onClick={handleDelete}>
+    <div className="post-card">
       <div className="post-header">
         <img src={profilePicture} alt={name} className="profile-picture" />
         <div className="post-info">
@@ -27,11 +35,15 @@ const PostCard = ({
           <p className="post-date">{date}</p>
         </div>
         {name === "Sarah" && (
-          <button onClick={handleDelete} className="delete-button">
-            ❌
-          </button>
+          <>
+            <button onClick={handleDelete} className="delete-button">
+              ❌
+            </button>
+            <button onClick={handleEdit} className="delete-button">
+              ✏️
+            </button>
+          </>
         )}
-        <img src={optionsIcon} alt="Options" className="options-icon" />
       </div>
       <p className="post-caption">{caption}</p>
       <table className="exercise-table">
